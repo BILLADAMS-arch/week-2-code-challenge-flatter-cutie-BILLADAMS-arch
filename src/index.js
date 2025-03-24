@@ -21,10 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
      function displayCharacterDetails(character) {
-            selectedCharacter = character.id; 
+            selectedCharacter = character.id;
             nameElement.textContent = character.name;
             imageElement.src = character.image;
             imageElement.alt = character.name;
             voteCountElement.textContent = character.votes;
         }
-
+        voteForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const voteInput = document.getElementById("votes");
+            const votesToAdd = parseInt(voteInput.value) || 0;
+            if (selectedCharacter === 0) {
+                alert("Select a character first!");
+                return;
+            }
+            const newVoteCount = parseInt(voteCountElement.textContent) + votesToAdd;
+            voteCountElement.textContent = newVoteCount;
+            voteInput.value = "";
+        });
