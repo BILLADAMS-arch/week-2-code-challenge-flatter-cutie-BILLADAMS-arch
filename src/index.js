@@ -39,3 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
             voteCountElement.textContent = newVoteCount;
             voteInput.value = "";
         });
+        resetButton.addEventListener("click", () => {
+            if (selectedCharacter === 0) {
+                alert("Select a character first!");
+                return;
+            }
+            voteCountElement.textContent = 0;
+        });
+    });
