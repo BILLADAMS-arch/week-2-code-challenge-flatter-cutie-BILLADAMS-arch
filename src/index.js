@@ -20,4 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 characterBar.appendChild(span);
             });
         });
+     function displayCharacterDetails(character) {
+            selectedCharacter = character.id; 
+            nameElement.textContent = character.name;
+            imageElement.src = character.image;
+            imageElement.alt = character.name;
+            voteCountElement.textContent = character.votes;
+        }
 
