@@ -21,9 +21,9 @@ Run this command to get the backend started:
 json-server --watch db.json
 ```
 
-Test your server by visiting this route in the browser:
+Test my server by visiting this route in the browser:
 
-[http://localhost:3000/characters](http://localhost:3000/characters)
+https://week-2-code-challenge-flatter-cutie-billadams-arch.vercel.app/
 
 Then, open the `index.html` file on your browser to run the application.
 
