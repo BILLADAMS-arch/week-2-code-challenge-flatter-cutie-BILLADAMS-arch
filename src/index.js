@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let selectedCharacter = 0;
 
-    fetch("http://localhost:3000/characters")
+    fetch("https://flatter-cuties-five.vercel.app/characters")
         .then((response) => response.json())
         .then((characters) => {
             characters.forEach((character) => {
